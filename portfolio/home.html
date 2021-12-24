@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Kevin Tjia</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <link rel="stylesheet" href="css/main.css">
   <script src="lib/jquery/jquery-2.1.4.min.js"></script>
   <script src="lib/scrollmagic/uncompressed/ScrollMagic.js"></script>
@@ -39,7 +39,8 @@
       <div class="right-cover">
         <h5>Student at Toyo University, Tokyo, with an interest in</h5>
         <div id="ux-prod-info">
-          <h3>//UX DESIGN<br>//PRODUCT DESIGN<br>//INFORMATION DESIGN</h3>
+          <h2 class="vertical">DESIGN</h2>
+          <h3>// UX<br>// PRODUCT<br>// INFORMATION</h3>
         </div>
       </div>
 
@@ -55,43 +56,77 @@
 
     <div id="categories">
       <div class="left">
+        <button value="product">Product Design</button>
         <button value="web">Web Design</button>
         <span>|</span>
         <button value="all" autofocus>All</button>
       </div>
       <div class="center">
-        <button value="product">Product Design</button>
+        <button value="planning">Product Planning</button>
       </div>
       <div class="right">
         <button value="info">Infographic</button>
+        <button value="other">Other</button>
       </div>
     </div>
 
     <table id="works">
       <tr>
-        <td class="web product info">
-          <a href="#work1" class="current"><img src="img/omnilight.png" alt="work1"></a>
-        </td>
-        <td class="web">
-          <a href="#work2"><img src="img/omnilight.png" alt="work2"></a>
-        </td>
-        <td class="web product">
-          <a href="#work3"><img src="img/omnilight.png" alt="work3"></a>
-        </td>
-        <td class="product">
-          <a href="#work4"><img src="img/omnilight.png" alt="work4"></a>
-        </td>
-        <td class="product info">
-          <a href="#work5"><img src="img/omnilight.png" alt="work5"></a>
-        </td>
-        <td class="info">
-          <a href="#work6"><img src="img/omnilight.png" alt="work6"></a>
-        </td>
-        <td class="info">
-          <a href="#work7"><img src="img/omnilight.png" alt="work7"></a>
-        </td>
         <td class="web info">
-          <a href="#work8"><img src="img/omnilight.png" alt="work8"></a>
+          <a href="#work1" class="current">
+            <img src="img/works/me_farm_dark.png" alt="work1">
+            <div class="overlay">
+              <div class="caption"><p>Portfolio</p></div>
+            </div>
+          </a>
+        </td>
+        <td class="web planning">
+          <a href="#work2">
+            <img src="img/works/grapevine2.png" alt="work2">
+            <div class="overlay">
+              <div class="caption"><p>Grapevine</p></div>
+            </div>
+          </a>
+        </td>
+        <td class="web other">
+          <a href="#work3">
+            <img src="img/works/tiff.png" alt="work3">
+            <div class="overlay">
+              <div class="caption"><p>TIFF</p></div>
+            </div>
+          </a>
+        </td>
+        <td class="product planning">
+          <a href="#work4">
+            <img src="img/works/omnilight3.png" alt="work4">
+            <div class="overlay">
+              <div class="caption"><p>Omnilight</p></div>
+            </div>
+          </a>
+        </td>
+        <td class="product planning">
+          <a href="#work5">
+            <img src="img/works/prefecture_map.png" alt="work5">
+            <div class="overlay">
+              <div class="caption"><p>Prefecture</p><p>Vexillology</p><p>Project</p></div>
+            </div>
+          </a>
+        </td>
+        <td class="product planning info">
+          <a href="#work6">
+            <img src="img/works/konomi_kome2.png" alt="work6">
+            <div class="overlay">
+              <div class="caption"><p>KONOMI</p><p>KOME</p></div>
+            </div>
+          </a>
+        </td>
+        <td class="other">
+          <a href="#work7">
+            <img src="img/works/whats_next.jpg" alt="the future">
+            <div class="overlay">
+              <div class="caption"><p>What's next?</p></div>
+            </div>
+          </a>
         </td>
       </tr>
     </table>
@@ -99,87 +134,55 @@
     <div id="contents">
 
       <div id="work1">
-        <h3>OmniLight</h3>
+        <h6>Portfolio</h6>
         <div class="line"></div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-          est laborum.</p>
+        <div class="tools"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>jQuery</span></div>
+        <p>To be added</p>
       </div>
 
       <div id="work2">
-        <p><strong>02</strong></p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-          est laborum.</p>
+        <h6>Grapevine</h6><span class="soft">Team Project</span>
+        <div class="line"></div>
+        <div class="tools"><span>Django</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Figma</span></div>
+        <p>To be added</p>
       </div>
       <div id="work3">
-        <p><strong>03</strong></p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-          est laborum.</p>
+        <h6>TIFF</h6><span class="soft">Team Project</span>
+        <div class="line"></div>
+        <div class="tools"><span>OBS</span><span>Adobe Premiere</span><span>Wix</span><span>JavaScript</span><span>Powerpoint</span></div>
+        <p>To be added</p>
       </div>
       <div id="work4">
-        <p><strong>04</strong></p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-          est laborum.</p>
+        <h6>Omnilight</h6>
+        <div class="line"></div>
+        <div class="tools"><span>Autodesk Fusion 360</span><span>Illustrator</span><span>Photoshop</span></div>
+        <p>To be added</p>
       </div>
       <div id="work5">
-        <p><strong>04</strong></p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-          est laborum.</p>
+        <h6>Pref. Vexillology Project</h6>
+        <div class="line"></div>
+        <div class="tools"><span>Autodesk Fusion 360</span><span>Illustrator</span><span>Photoshop</span></div>
+        <p>To be added</p>
       </div>
       <div id="work6">
-        <p><strong>04</strong></p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-          est laborum.</p>
+        <h6>KONOMI KOME</h6>
+        <div class="line"></div>
+        <div class="tools"><span>Autodesk Fusion 360</span><span>InDesign</span><span>Illustrator</span><span>Photoshop</span></div>
+        <p>To be added</p>
       </div>
       <div id="work7">
-        <p><strong>04</strong></p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-          est laborum.</p>
+        <h6>My upcoming plans</h6>
+        <div class="line"></div>
+        <div class="tools"><span>me</span><span>you?</span></div>
+        <p>*plan of my future projects*</p>
+        <p style="font-size:.5em">*picture to be changed*</p>
       </div>
-      <div id="work8">
-        <p><strong>04</strong></p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-          est laborum.</p>
-      </div>
+    </div>
+
+    <div id="contact" class="repeat-lines">
+      <h2 class="vertical">Contact</h2>
+      <h5>Say hi to me here</h5>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kevin.a.tjia@gmail.com&su=Hi!" target="_blank"><h3><span style="opacity:.5;">//</span>kevin.a.tjia@gmail.com</h3></a>
     </div>
   </div>
 </body>

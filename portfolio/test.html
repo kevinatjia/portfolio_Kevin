@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<style>
+		#works {
+			height: auto;
+			padding: 0;
+			text-align: center;
+			font-size: 0px;
+			letter-spacing: 0px;
+			word-spacing: 0px;
+			background-color: var(--main-color);
+			white-space: nowrap;
+			position: relative;
+			z-index: 1;
+		}
+
+		#works table {
+			width: 100%;
+			table-layout: fixed;
+			text-align: center;
+		}
+
+		#works table,
+		tr,
+		td,
+		a {
+			border: none;
+			border-collapse: collapse;
+			margin: 0;
+			padding: 0;
+		}
+
+		#works td {
+			width: 12.5%;
+			-webkit-transition: all 0.5s ease;
+			transition: all 0.5s ease;
+		}
+
+		#works img {
+			width: 100%;
+			height: 400px;
+			object-fit: cover;
+		}
+
+		#works td:hover {
+			-webkit-filter: brightness(120%);
+			filter: brightness(120%);
+		}
+
+		#works a {
+			position: relative;
+		}
+
+		#works .overlay {
+			position: absolute;
+			bottom: 10px;
+			left: 0;
+			right: 0;
+			overflow: hidden;
+			width: 100%;
+			height: 0;
+			transition: .4s ease;
+			background: rgba(0,0,0,.3);
+		}
+
+		#works td:hover .overlay {
+			height: 100px;
+		}
+
+		#works .caption {
+			font-size: 20px;
+			position: absolute;
+			bottom: 0;
+			left: 6%;
+			text-align: left;
+		}
+
+		#works .caption p {
+			font-size: 1.5em;
+			font-weight: 700;
+			line-height: 0.1em;
+			color: #FFFFFF;
+		}
+	</style>
+</head>
+
+<body>
+	<table id="works">
+		<tr>
+			<td class="web info">
+				<a href="#work1" class="current">
+					<img src="img/works/me_farm_dark.png" alt="work1">
+					<div class="overlay">
+						<div class="caption">
+							<p>Portfolio</p>
+						</div>
+					</div>
+				</a>
+			</td>
+			<td class="web">
+				<a href="#work2">
+					<img src="img/works/grapevine2.png" alt="work2">
+					<div class="overlay">
+						<div class="caption">
+							<p>Grapevine</p>
+						</div>
+					</div>
+				</a>
+			</td>
+			<td class="web">
+				<a href="#work3">
+					<img src="img/works/tiff.png" alt="work3">
+					<div class="overlay">
+						<div class="caption">
+							<p>TIFF</p>
+						</div>
+					</div>
+				</a>
+			</td>
+			<td class="product">
+				<a href="#work4">
+					<img src="img/works/omnilight3.png" alt="work4">
+					<div class="overlay">
+						<div class="caption">
+							<p>Omnilight</p>
+						</div>
+					</div>
+				</a>
+			</td>
+			<td class="">
+				<a href="#work5">
+					<img src="img/works/prefecture_map.png" alt="work5">
+					<div class="overlay">
+						<div class="caption">
+							<p>Prefecture</p>
+							<p>Vexillology</p>
+							<p>Project</p>
+						</div>
+					</div>
+				</a>
+			</td>
+		</tr>
+</body>
+
+</html>

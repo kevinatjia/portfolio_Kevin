@@ -1,14 +1,48 @@
 //filtering
-let web = true;
-let product = true;
-let info = true;
+//let web = true;
+//let product = true;
+//let planning = true;
+//let info = true;
+//let other = true;
+
+//categories slider
+$(document).ready(function () {
+  const slider = document.querySelector('#categories');
+  let mouseDown = false;
+  let startX, scrollLeft;
+
+  let startDragging = function (e) {
+    mouseDown = true;
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+  };
+  let stopDragging = function () {
+    mouseDown = false;
+  };
+
+  slider.addEventListener('mousemove', (e) => {
+    e.preventDefault();
+    if (!mouseDown) {
+      return;
+    }
+    const x = e.pageX - slider.offsetLeft;
+    const scroll = x - startX;
+    slider.scrollLeft = scrollLeft - scroll;
+  });
+
+  // Add the event listeners
+  slider.addEventListener('mousedown', startDragging, false);
+  slider.addEventListener('mouseup', stopDragging, false);
+  slider.addEventListener('mouseleave', stopDragging, false);
+});
+
 
 $(document).ready(function () {
   // on button click
   $("button").click(function () {
     // retrieve the button value
     var target = $(this).attr("value");
-    web = product = info = false;
+    web = product = planning = info = other = false;
     // examine all li elements
     $("#works td").each(function () {
       $(this).animate({
@@ -24,73 +58,66 @@ $(document).ready(function () {
         }
       });
     });
-    // switching booleans for hover
+    /* switching booleans for hover
     if (target == "all") {
-      web,
-      product,
-      info = true;
+      web = product = info = true;
     }
     else if (target == "web") {
       web = true;
     } else if (target == "product") {
       product = true;
+    } else if (target == "planning") {
+      planning = true;
     } else if (target == "info") {
       info = true;
+    } else if (target == "other") {
+      other = true;
     }
+    // for testing
     console.log({
       target,
       web,
       product,
-      info
-    });
+      planning,
+      info,
+      other
+    });*/
   });
 });
 
-/*
-//image hover
-$(document).ready(function () {
 
-  var duration = 300;
+// hover opacity
+$(document).ready(function () {
 
   var $works = $('#works td');
-  $works.mouseenter(function () {
-    $(this).animate({
-      width: '+=40px'
-    }, duration);
-    $(this).animate({
-      "opacity": 1
-    }, 300);
-  });
+  var $caption = $('#works td a');
+  var original_opacity;
 
-  $works.mouseleave(function () {
-    $(this).animate({
-      width: '-=40px'
-    }, duration);
-
-  if ($(this).hasClass(web) && web == false) {
-
-    $(this).animate({
-      "opacity": 0.3
-    }, 300);
-  }
-});
-*/
-
-$(document).ready(function () {
-
-  var original_opacity = $($works).css("opacity");
-
-  $(this).find('a img').hover(
+  $works.hover(
     function () {
-      /* 
-        fadeTo(), the 1st argument is fading duration	
-      */
+      original_opacity = $(this).css("opacity");
+      // fadeTo(), the 1st argument is fading duration, 2nd is opacity value
       $(this).stop().fadeTo(300, 1);
     },
     function () {
-      $(this).stop().fadeTo(300, original_opacity);
+      $(this).stop().fadeTo(200, original_opacity);
+      //$(this).animate({
+      //  "transform": scaleX(1)
+      //}, 300);
     }
-    );
+  );
+
+  $caption.filter(':nth-child(1)')
+    .on('mouseover', function () {
+      $(this).find('strong').stop(true).animate({
+        opacity: 1
+      }, duration);
+    })
+    .on('mouseout', function () {
+      $(this).find('strong').stop(true).animate({
+        opacity: 0
+      }, duration);
+    });
 });
 
 //smooth scroll
@@ -102,11 +129,11 @@ $(document).ready(function () {
 
     //target -= 70;     //scroll offset
 
-    if ($(this).attr("id*") == "work") {
+    /*if ($(this).attr("id*") == "work") {
       $("html, body").animate({
         scrollTop: $("contents")
       }, 500);
-    }
+    }*/
 
     $("html, body").animate({
       scrollTop: target
