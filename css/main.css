@@ -38,6 +38,7 @@ body {
 .container {
     color: var(--main-color);
     background-color: #D8E1E3;
+    width: 100%;
 }
 
 .line {
@@ -48,7 +49,18 @@ body {
     position: absolute;
     left: 0;
     height: 4px;
-    width: 60%;
+}
+
+@media screen and (max-width: 600px) {
+    .line {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .line {
+        width: 60%;
+    }
 }
 
 .repeat-lines {
@@ -162,12 +174,14 @@ body {
     margin: 202px 2em 0 0;
     text-align: right;
     color: var(--secondary-color);
+    overflow: hidden;
 }
 
 .right-cover #ux-prod-info {
     position: relative;
     bottom: 0;
     z-index: 1;
+    overflow: hidden;
 }
 
 .right-cover h2 {
@@ -289,10 +303,7 @@ body {
     text-align: center;
 }
 
-#works table,
-tr,
-td,
-a {
+#works table, tr, td, a {
     border: none;
     border-collapse: collapse;
     margin: 0;
@@ -353,9 +364,16 @@ a {
 
 /* ========== SECTION 2 - CONTENTS ========== */
 
-#contents {
-    padding: 40px 22.5%;
-    background-color: red;
+@media screen and (max-width: 400px) {
+    #contents {
+        padding: 40px 20px;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    #contents {
+        padding: 40px 22.5%;
+    }
 }
 
 #contents {
@@ -373,7 +391,7 @@ p {
     position: relative;
 }
 
-#contents h6 {
+#contents .title {
     font-size: clamp(2em, 5vw, 3rem);
     line-height: 1em;
     padding: 0 14px 8px 0;
@@ -382,23 +400,82 @@ p {
 
 #contents .soft {
     background: rgba(204, 204, 195, .1);
-}
-
-#contents .tools {
-    padding: 20px 0;
-}
-
-#contents span {
     color: var(--tertiary-color);
-    background: rgba(204, 204, 195, .2);
     margin-right: 10px;
     padding: 4px 8px 5px 8px;
     border-radius: 6px;
     line-height: 1em;
+    display: inline-block;
+}
+
+#contents .tools {
+    padding: 20px 0 0 0;
+    line-height: 30px;
+}
+
+#contents .tools span {
+    background: rgba(204, 204, 195, .2);
+    color: var(--tertiary-color);
+    margin-right: 10px;
+    padding: 4px 8px 5px 8px;
+    border-radius: 6px;
+    line-height: 1em;
+    display: inline-block;
+}
+
+#contents .bold {
+    font-weight: 700;
+    color: var(--secondary-color);
+    font-size: 1.2em;
 }
 
 #contents p {
-    margin-top: 30px;
+    margin: 40px 0;
+}
+
+#contents video {
+    padding: 0;
+}
+
+.iframe-slideshare-16x9 {
+    padding-bottom: calc(56.25% + 38px);
+    position: relative;
+    width: 100%;
+    height: 0;
+}
+
+.iframe-slideshare-16x9 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border:1px solid #CCC; 
+}
+
+@media screen and (max-width: 400px) {
+    .side-frame {
+        position: relative;
+        color: var(--secondary-color);
+        padding-bottom: 4px;
+        margin-bottom: 0;
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    .side-frame {
+        left: calc(22.5% - 1.2em);
+
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        position: absolute;
+        margin: 0;
+        font-size: 4.2em;
+        line-height: 1.5em;
+        color: var(--secondary-color);
+        opacity: 0.35;
+    }
 }
 
 /* ========== CONTACT ========== */
@@ -410,21 +487,40 @@ p {
     position: relative;
 }
 
-#contact h2 {
-    left: 15%;
-    top: 40px;
+@media screen and (max-width: 400px) {
+    #contact h2 {
+        left: 10px;
+        top: 20px;
+        line-height: 1em;
+    }
+
+    #contact h5 {
+        padding: 80px 20px 0 40%;
+        color: var(--secondary-color);
+        font-size: 1.5em;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    #contact h2 {
+        left: 15%;
+        top: 40px;
+    }
 }
 
 #contact h5 {
-    padding: 80px 22.5% 0 40%;
+    padding: 80px 20px 0 40%;
     color: var(--secondary-color);
     font-size: 1.5em;
     margin: 0;
 }
 
 #contact h3 {
-    padding: 60px 22.5% 0 30%;
-    font-size: 3em;
+    padding: 60px 20px 0 30%;
+    font-size: clamp(1em, 4vw, 3em);
+    overflow: hidden;
+    line-height: 1em;
     font-family: Lucida Sans Typewriter,Lucida Console,monaco,Bitstream Vera Sans Mono,monospace; 
 }
 
