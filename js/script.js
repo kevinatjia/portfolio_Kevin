@@ -46,7 +46,7 @@ $(document).ready(function () {
     // examine all li elements
     $("#works td").each(function () {
       $(this).animate({
-        "opacity": 0.3
+        "opacity": 0.25
       }, 300, function () {
         // フィルタリングの条件を満たしているか
         if ($(this).hasClass(target) || target == "all") {
@@ -127,7 +127,7 @@ $(document).ready(function () {
 
     var target = $($(this).attr("href")).offset().top;
 
-    //target -= 70;     //scroll offset
+    target -= 60;     //scroll offset
 
     /*if ($(this).attr("id*") == "work") {
       $("html, body").animate({
@@ -164,4 +164,31 @@ $(function () {
 
     return false;
   });
+});
+
+
+//header styling on scroll
+$(window).on("scroll", function () {
+  //change when scroll is 499px down
+  if ($(this).scrollTop() > 499) {
+    //change colors
+    $(".header").css("background", "rgba(0,0,0,.7)");
+    $(".header a").css("color", "var(--tertiary-color)");
+    //hover color
+    $(".header a").hover(function() {
+      $(this).css("color", "var(--accent-color)");
+    }, function() {
+      $(this).css("color", "var(--tertiary-color)");
+    });
+  //change colors back when scroll is <500 again
+  } else {
+    $(".header").css("background", "transparent");
+    $(".header a").css("color", "var(--main-color)");
+    //hover color
+    $(".header a").hover(function() {
+      $(this).css("color", "var(--accent-color)");
+    }, function() {
+      $(this).css("color", "var(--main-color)");
+    });
+  }
 });
