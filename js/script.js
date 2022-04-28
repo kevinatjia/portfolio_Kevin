@@ -33,15 +33,17 @@ $(document).ready(function () {
 //categories highlight
 $(document).ready(function () {
   // on button click
-  $("button").click(function () {
+  $("#categories button").click(function () {
     // retrieve the button value
     var target = $(this).attr("value");
     web = product = planning = info = other = false;
     // examine all li elements
     $("#works td").each(function () {
+
       $(this).animate({
         "opacity": 0.25
       }, 300, function () {
+
         // フィルタリングの条件を満たしているか
         if ($(this).hasClass(target) || target == "all") {
           // 条件を満たしている場合は再表示
@@ -51,6 +53,14 @@ $(document).ready(function () {
           }, 300);
         }
       });
+    });
+
+    $("#categories button").each(function () {
+      $(this).css("color", "var(--secondary-color)");
+
+      if ($(this).hasClass(target)) {
+        $(this).css("color", "var(--tertiary-color)");
+      }
     });
   });
 });
@@ -125,12 +135,15 @@ $(function () {
 //smooth scroll to section
 $(document).ready(function () {
 
-  $("a[href*=#]:not([href=#]), div[href*=#]:not([href=#])").click(function () {
+  $("a[href*=#]:not([href=#]), div[href*=#]:not([href=#]), button[href*=#]:not([href=#])").click(function () {
 
     var target = $($(this).attr("href")).offset().top;
 
-    //target -= 0;     //scroll offset
-
+    if($(this).is("button")) {
+      //scroll offset
+      target -= 18;
+    }
+    
     $("html, body").animate({
       scrollTop: target
     }, 500);
@@ -164,6 +177,24 @@ $(window).on("scroll", function () {
       $(this).css("color", "var(--accent-color)");
     }, function() {
       $(this).css("color", "var(--main-color)");
+    });
+  }
+});
+
+//collapsible work description
+$(document).ready(function () {
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+  
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.maxHeight){
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
     });
   }
 });

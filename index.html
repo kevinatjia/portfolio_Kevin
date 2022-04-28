@@ -85,19 +85,19 @@
 
   <div id="categories" href="#categories">
     <div class="left">
-      <button value="product">Product Design</button>
-      <button value="web">Web Design</button>
+      <button value="product" class="product">Product Design</button>
+      <button value="web" class="web">Web Design</button>
       <svg xmlns="http://www.w3.org/2000/svg" height="100%" width="58px" fill="currentColor">
         <path d="M10 10 V36" stroke="#847366" stroke-width="1" />
       </svg>
-      <button value="all" autofocus>All</button>
+      <button value="all" class="all" autofocus>All</button>
     </div>
     <div class="center">
-      <button value="planning">Product Planning</button>
+      <button value="ux" class="ux">UX Design</button>
     </div>
     <div class="right">
-      <button value="info">Infographic</button>
-      <button value="other">Other</button>
+      <button value="info" class="info">Infographic</button>
+      <button value="other" class="other">Other</button>
     </div>
   </div>
 
@@ -124,17 +124,17 @@
           </div>
         </a>
       </td>
-      <td class="product planning">
+      <td class="product ux">
         <a href="#work3">
-          <img src="img/work_covers/omnilight_960x960.png" alt="work3">
+          <img src="img/work_covers/omnitorch_960x960.png" alt="work3">
           <div class="overlay">
             <div class="caption">
-              OMNILIGHT
+              OMNITORCH
             </div>
           </div>
         </a>
       </td>
-      <td class="web planning">
+      <td class="web ux">
         <a href="#work4">
           <img src="img/work_covers/grapevine_960x960.png" alt="work4">
           <div class="overlay">
@@ -144,7 +144,7 @@
           </div>
         </a>
       </td>
-      <td class="product planning">
+      <td class="product">
         <a href="#work5">
           <img src="img/work_covers/pref_map_960x960.png" alt="work5">
           <div class="overlay">
@@ -154,7 +154,7 @@
           </div>
         </a>
       </td>
-      <td class="product planning info">
+      <td class="product info">
         <a href="#work6">
           <img src="img/work_covers/konomi_kome_960x960.png" alt="work6">
           <div class="overlay">
@@ -217,6 +217,7 @@
                   Sports</span><span>Video Games</span><span>Piano</span></div>
             </div>
           </div>
+          <div class="line"></div>
         </div>
         <p>
           Hi! I'm Kevin and come from a small town in The Netherlands.
@@ -246,7 +247,7 @@
               <h6 class="title">TOYO<br>INTERNATIONAL<br>FILM FESTIVAL</h6>
               <br>
               <a href="https://www.tiff-toyo.com/" target="_blank">
-                <h3 style="display:inline-block;">- Visit the website here!</h3>
+                <h3 style="display:inline-block;">/ Visit the website here!</h3>
               </a>
               <span class="work-date">Team Project</span>
             </div>
@@ -255,45 +256,52 @@
                   Pro</span><span>Wix</span><span>JavaScript</span><span>Powerpoint</span></div>
             </div>
           </div>
-        </div>
-        <p>
-          The Toyo International Film Festival, TIFF for short, is the initiative of TGS, a group of Toyo University
-          students supervised by university staff <a href="https://www.youtube.com/c/ToyoGemstone/about"
-            target="_blank">(more info on TGS here)</a>.
-          The festival consists of two parts, the Short Film Competition and the Collaborative Movie Project:
-        </p>
-        <div class="container text-center">
-          <div class="row">
-            <div class="col-6">
-              <h2>Short Film<br>Competition</h2>
+          <div class="line"></div>
+          <button type="button" class="collapsible" id="description2" href="#description2">
+            View project description
+          </button>
+          <div class="collapsible-content">
+            <p>
+              The Toyo International Film Festival, TIFF for short, is the initiative of TGS, a group of Toyo University
+              students supervised by university staff <a href="https://www.youtube.com/c/ToyoGemstone/about"
+                target="_blank">(more info on TGS here)</a>.
+              The festival consists of two parts, the Short Film Competition and the Collaborative Movie Project:
+            </p>
+            <div class="container text-center">
+              <div class="row">
+                <div class="col-6">
+                  <h2>Short Film<br>Competition</h2>
+                </div>
+                <div class="col-6">
+                  <h2>Colaborative<br>Movie Project</h2>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <p>Members of Toyo University and its partner universities worldwide are invited to participate and share
+                    their voices by submitting their original short films. TIFF receives open submissions on the short film
+                    competition program.</p>
+                </div>
+                <div class="col-6">
+                  <p>Collaborative Movie is a single compilation of episodic films, each filmed in different countries. A
+                    selected number of partner institutions will collaborate with students from Toyo University.</p>
+                </div>
+              </div>
             </div>
-            <div class="col-6">
-              <h2>Colaborative<br>Movie Project</h2>
-            </div>
+            <p>
+              TIFF aims to create a brand-new cross-cultural platform,
+              where everyone's unique voices are heard loud and clear without any limits or restrictions.
+              The founding year, 2021, its title was 'Your Voice'.
+            </p>
           </div>
-          <div class="row">
-            <div class="col-6">
-              <p>Members of Toyo University and its partner universities worldwide are invited to participate and share
-                their voices by submitting their original short films. TIFF receives open submissions on the short film
-                competition program.</p>
-            </div>
-            <div class="col-6">
-              <p>Collaborative Movie is a single compilation of episodic films, each filmed in different countries. A
-                selected number of partner institutions will collaborate with students from Toyo University.</p>
-            </div>
-          </div>
+          <div class="line"></div>
         </div>
+
         <p>
-          TIFF aims to create a brand-new cross-cultural platform,
-          where everyone's unique voices are heard loud and clear without any limits or restrictions.
-          The founding year, 2021, its title was 'Your Voice'.
-          <br><br>
           Nominated works of Short Film Competition and completed work of Collaborative Movie were screened at Toyo
           University's Inoue Enryo Hall at the premier on December 11, 2021.
-          The premier was live-streamed on the TGS youtube channel, which can be found here.
-          <br><br>
-          Later this year, TIFF will be making its return on stage
-        </p>
+          The premier was live-streamed on the TGS youtube channel, of which the recording is shown below:
+        </p>        
         <h2 class="side-frame">TIFF 2021</h2>
         <div class="iframe-slideshare-16x9">
           <iframe width="100%" src="https://www.youtube.com/embed/_Q71gpR5ESY" title="TIFF 2021" frameborder="0"
@@ -310,31 +318,57 @@
         <div class="container content-header">
           <div class="row align-items-center">
             <div class="col-8">
-              <h6 class="title">OMNILIGHT</h6><span class="work-date">2020/Fall</span>
+              <h6 class="title">OMNITORCH</h6><span class="work-date">2020/Fall</span>
             </div>
             <div class="col-4">
               <div class="tools"><span>Autodesk Fusion 360</span><span>Illustrator</span><span>Photoshop</span></div>
             </div>
           </div>
+
+          <div class="line"></div>
+          <button type="button" class="collapsible" id="description3" href="#description3">
+            View project description
+          </button>
+          <div class="collapsible-content">
+            <div class="row p-0">
+              <div class="col-6">
+                <div class="italic">
+                  University project
+                  <br><br><br>
+                  Product design<br>
+                  User Experience design
+                  <br><br><br>
+                  Duration: 1/2 semester
+                </div>
+              </div>
+              <div class="col-6">
+                <div>
+                  The OmniTorch was born from a university class project with the instruction of "Design an LED light".<br><br>
+                  Having recently watched the Netflix series Dark at that time, I was inspired to build upon the idea of a futuristic looking flashlight by turning the tv show prop into an (almost) real product.<br><br>
+                  The project scope included designing the aesthetics of the product, its use cases, and the production to a limited degree.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="line"></div>
         </div>
-        <p>View project description</p>
+
         <div class="switch-image">
-          <img class="image-main" src="img/omnilight/Render1_shadow_OFF.png" width="100%" alt="Omnitorch Multiview">
-          <img class="image-hover" src="img/omnilight/Render1_shadow_ON.png" width="100%" alt="Omnitorch Multiview">
+          <img class="image-main" src="img/omnitorch/Render1_shadow_OFF.png" width="100%" alt="Omnitorch Multiview">
+          <img class="image-hover" src="img/omnitorch/Render1_shadow_ON.png" width="100%" alt="Omnitorch Multiview">
         </div>
-        <p>
-          Description of product. Description of product. Description of product. Description of product. Description of
-          product. Description of product. Description of product. Description of product. Description of product.
-          Description of product. Description of product.
-        </p>
-        <img src="img/omnilight/Properties_16x11.png" width="80%"
-          style="border-width:1px;border-color:#000000;border-style:solid;" class="mx-auto d-block"
+      </div>
+
+      <img src="img/omnitorch/Properties_16x11.png" width="100%"
+          class="mx-auto d-block"
           alt="Omnitorch Properties">
+
+      <div class="padded">
         <div class="container">
           <div class="row">
             <div class="col-12">
               <div class="text-over-img">
-                <img src="img/omnilight/dark1.png" width="100%" alt="Netflix Dark's flashlight">
+                <img src="img/omnitorch/dark1.png" width="100%" alt="Netflix Dark's flashlight">
                 <p class="overlay-text-topleft">
                   <span style="color:#E50914;">NETFLIX</span> | Dark
                 </p>
@@ -363,14 +397,38 @@
                 <span>Django</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Figma</span></div>
             </div>
           </div>
+
+          <div class="line"></div>
+          <button type="button" class="collapsible" id="description4" href="#description4">
+            View project description
+          </button>
+          <div class="collapsible-content">
+            <div class="row p-0">
+              <div class="col-6">
+                <div class="italic">
+                  University group project
+                  <br><br><br>
+                  Web design<br>
+                  User Experience design<br>
+                  User Interface design
+                  <br><br><br>
+                  Duration: 1 semester
+                </div>
+              </div>
+              <div class="col-6">
+                <div>
+                  <span class="bold">SUMMARY - </span>
+                  Grapevine is an SNS-integration service platform that aims to provide an accessible, all-in-one place for people to satisfy their social media consumption needs. The platform takes the updates, posts and pictures of anyone you wish to follow on any platform, and aggregates them all into a single timeline, in one single app.
+                  <br><br>
+                  Aggregation is currently in development to support Facebook, Instagram, and Twitter.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="line"></div>
         </div>
         <p>
-          <span class="bold">SUMMARY - </span>
-          Grapevine is an SNS-integration service platform that aims to provide an accessible, all-in-one place for
-          people to satisfy their social media consumption needs. The platform takes the updates, posts and pictures of
-          anyone you wish to follow on any platform, and aggregates them all into a single timeline, in one single app.
-          <br><br>
-          Aggregation is currently in development to support Facebook, Instagram, and Twitter.
+          
         </p>
         <h2 class="side-frame">DEMO</h2>
         <video width="100%" height="100%" controls>
@@ -450,7 +508,7 @@
         <path fill-rule="evenodd" d="M10 65 L60 25 L110 65" stroke="#847366" stroke-width=".6" fill="none" />
       </svg>
     </div>
-    <div class="text right"> WORKS</div>
+    <div class="text right">&nbsp;WORKS</div>
   </div>
 
   <div id="contact" class="repeat-lines">
