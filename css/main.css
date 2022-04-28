@@ -16,6 +16,7 @@ h5 { font-family: 'Work Sans', sans-serif; font-size: 14px; font-style: normal; 
 h6 { font-family: 'Work Sans', sans-serif; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 200; line-height: 20px; }
 p { font-family: 'Work Sans', sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 300; line-height: 20px; }
 button { font-family: 'Work Sans', sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 300; }
+div { font-family: 'Work Sans', sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 200; }
 
 .italic {
     font-style: italic;
@@ -380,17 +381,18 @@ body {
     border-collapse: collapse;
     margin: 0;
     padding: 0;
+    height: 60vh;
 }
 
 #works td {
-    width: 12.5%;
+    width: 2%;
     min-width: 120px;
     overflow: hidden;
 }
 
 #works img {
     width: 100%;
-    height: 400px;
+    height: 100%;
     object-fit: cover;
     filter: grayscale(100%);
 }
@@ -401,36 +403,41 @@ body {
 
 #works a {
     position: relative;
+    display: inline-block;
 }
 
 #works .overlay {
     position: absolute;
-    bottom: 10px;
+    top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
-    overflow: hidden;
     width: 100%;
-    height: 0;
-    transition: all .4s ease .5s;
+    height: 100%;
+    opacity: 0;
+    transition: .5s ease;
+
+    pointer-events: none;
 }
 
 #works td:hover .overlay {
-    height: 100px;
-    transition: all .5s ease 0s;
-    /*width: 60vw;    /* text slide animation */
+    opacity: 1;
 }
 
 #works .caption {
-    font-size: 20px;
+    color: #FFFFFF;
+    font-size: 8vh;
+    font-weight: 700;
     position: absolute;
-    bottom: 10px;
-    left: 10%;
-    /*left: 1%;       /* constraint to text slide animation */
+    top: 0;
+    left: 0;
     text-align: left;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    line-height: 5.8vh;
 }
 
 #works .caption p {
-    font-size: clamp(.5em, 2.3vw, 1.5em);
     font-weight: 700;
     line-height: .9em;
     color: #FFFFFF;
@@ -452,11 +459,39 @@ body {
 
 #contents {
     height: auto;
-    min-height: 0px;
     background-color: var(--main-color);
     position: relative;
-    padding: 0 0 62px 0;
+    padding: 0;
     margin: 0;
+    border-top: 1px;    /* to avoid top pixel layer when auto scrolling */
+    border-color: var(--main-color);
+    border-style: solid;
+}
+
+#contents #highlight {
+    position: absolute;
+    width: 100%;
+    table-layout: fixed;
+}
+
+#contents #highlight tr, td, div {
+    border: none;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+
+#contents #highlight td {
+    width: 2%;
+    min-width: 120px;
+    overflow: hidden;
+}
+
+#contents #highlight td div {
+    width: auto;
+    height: 6px;
+    background-color: var(--accent-color);
 }
 
 #contents .padded {
@@ -514,7 +549,8 @@ body {
 }
 
 #contents p {
-    margin-bottom: 100px;
+    padding-bottom: 100px;
+    margin: 0;
 }
 
 #contents a {
@@ -617,6 +653,42 @@ body {
         color: var(--secondary-color);
         opacity: 0.35;
     }
+}
+
+/* ========== BACK TO WORKS ========== */
+
+#back-to-works {
+    position: relative;
+    height: 200px;
+    background-color: var(--main-color);
+    text-align: center;
+    transition: .5s ease;
+    cursor: pointer;
+
+    display: -webkit-flex;
+    /* Safari */
+    display: flex;
+    text-align: center;
+
+    align-items: center;
+    justify-content: center;
+}
+
+#back-to-works > div {
+    margin: 0 10px;
+}
+
+#back-to-works:hover {
+    opacity: .9;
+    letter-spacing: 10px;
+    transition: .5s ease;
+    transform: scale(1.1);
+}
+
+#back-to-works .text {
+    font-size: 30px;
+    color: var(--secondary-color);
+    transform: translateY(6px);
 }
 
 /* ========== CONTACT ========== */

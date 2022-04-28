@@ -95,11 +95,18 @@ $(document).ready(function () {
 $(function () {
   // hide all but #work1
   $('#contents > div[id != "work1"]').hide();
+  $('#contents > #highlight div[id != "highlight1"]').hide();
 
   // click on tab
   $("#works a").click(function () {
     // 一度全てのコンテンツを非表示にする
     $("#contents > div").hide();
+    $("#contents > #highlight div").hide();
+
+    //get clicked id value
+    var id = $(this).attr("href"); //get the id of the clicked button
+    var end = id.slice(-1);      //get last character from id
+    $(`div[id$=${end}]`).show(); //match the div with id ends with the character and show
 
     // 選択されたコンテンツを再表示する
     $($(this).attr("href")).show();
@@ -115,14 +122,14 @@ $(function () {
 });
 
 
-//smooth scroll
+//smooth scroll to section
 $(document).ready(function () {
 
   $("a[href*=#]:not([href=#]), div[href*=#]:not([href=#])").click(function () {
 
     var target = $($(this).attr("href")).offset().top;
 
-    target -= 0;     //scroll offset
+    //target -= 0;     //scroll offset
 
     $("html, body").animate({
       scrollTop: target
