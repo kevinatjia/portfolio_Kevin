@@ -5,25 +5,32 @@
   <meta charset="UTF-8">
   <title>Kevin Tjia</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+  <!--fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700&family=Work+Sans:ital,wght@0,200;0,300;0,400;0,600;1,200&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,200;0,300;0,400;0,600;1,200&display=swap"
     rel="stylesheet">
+
+  <!--bootstrap-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <!--jquery and scrollmagic-->
   <script src="lib/scrollmagic/uncompressed/ScrollMagic.js"></script>
   <script src="lib/jquery/jquery-2.1.4.min.js"></script>
   <script src="lib/scrollmagic/uncompressed/plugins/jquery.ScrollMagic.js"></script>
-  <script src="lib/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
-  <script src="js/script.js"></script>
-  <link rel="stylesheet" href="css/main.css">
+  <!--<script src="lib/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>-->
 
-  <script>
+  <!--css and js-->
+  <script src="js/script.js"></script>
+  <link rel="stylesheet" href="css/test.css">
+
+  <!--<script>
     function resizeIframe(obj) {
       obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
     }
-  </script>
+  </script>-->
 </head>
 
 <body>
@@ -39,8 +46,7 @@
       </div>
     </div>
 
-    <div id="cover" class="repeat-lines">
-      <div class="shadow"></div>
+    <div id="cover">
 
       <a href="#categories">
         <div class="categories-pointer">
@@ -53,33 +59,21 @@
         </div>
       </a>
 
-      <div class="left-cover">
-        <img src="img/Kevin_headshot_72dpi.png" alt="picture of me">
-        <div id="cover-name">
-          <h1>KEVIN<br>TJIA</h1>
-          <h2><span class="jp">チヤ ケビン</span></h2>
+      <section class="section section01 h-100" id="js-section01">
+        <div class="container h-100">
+          <div class="row justify-content-center align-items-center h-100" id="js-cover">
+            <div class="col-auto">
+              <img src="img/logo3.svg" class="filter-main-color float-right" width="auto" height="300px" />
+            </div>
+            <div class="col-auto">
+              <h1 class="cover-name">KEVIN<br>TJIA</h1>
+              <div class="stripe-h"></div>
+              <h6>PORTFOLIO</h6>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div class="right-cover">
-        <div id="ux-prod-info">
-          <h2 class="vertical">DESIGN</h2>
-          <a href="#categories">
-            <h3>
-              <span style="font-size: 1.8em;">UX</span>
-              <span class="jp">//</span>
-              <br>
-              <span class="jp">ユーザ・エクスペリエンス</span>
-            </h3>
-            <h3>PRODUCT <span class="jp">//</span>
-              <br><span class="jp">プロダクト</span>
-            </h3>
-            <h3>INFORMATION <span class="jp">//</span>
-              <br><span class="jp">インフォメーション</span>
-            </h3>
-        </div>
-        </a>
-      </div>
     </div>
   </div>
 
@@ -90,7 +84,7 @@
       <svg xmlns="http://www.w3.org/2000/svg" height="100%" width="58px" fill="currentColor">
         <path d="M10 10 V36" stroke="#847366" stroke-width="1" />
       </svg>
-      <button value="all" class="all" autofocus>All</button>
+      <button value="all" class="all" style="color:var(--tertiary-color);" autofocus>All</button>
     </div>
     <div class="center">
       <button value="ux" class="ux">UX Design</button>
@@ -164,7 +158,7 @@
           </div>
         </a>
       </td>
-      <td class="other">
+      <!--<td class="other">
         <a href="#work7">
           <img src="img/work_covers/whats_next.jpg" alt="the future">
           <div class="overlay">
@@ -173,7 +167,7 @@
             </div>
           </div>
         </a>
-      </td>
+      </td>-->
     </tr>
   </table>
 
@@ -199,9 +193,9 @@
         <td>
           <div id="highlight6"></div>
         </td>
-        <td>
+        <!--<td>
           <div id="highlight7"></div>
-        </td>
+        </td>-->
       </tr>
     </table>
 
@@ -219,17 +213,28 @@
           </div>
           <div class="line"></div>
         </div>
-        <p>
-          Hi! I'm Kevin and come from a small town in The Netherlands.
-          Currently, I am studying at Toyo University in Tokyo, Japan, majoring in Information Networking for Innovation
-          and Design (INIAD).
-          As a fourth year bachelors degree student, I am doing job hunting in preparation for graduation, which is
-          probably why you are reading this right now, thank you!
-          <br><br>
-          My interests include, but are not limited to: user experience design, product design, and information design.
-          Several of my works related to these interests are displayed in this web portfolio.
-          Please have a look and let me know what you think :)
-        </p>
+        <div class="row">
+          <div class="col-6">
+            <p>
+              Hi! My name is Kevin. I come from Epe, a rural town in The Netherlands.
+              Currently, I am studying at Toyo University in Tokyo, Japan, majoring in Information Networking for
+              Innovation
+              and Design (INIAD).
+              As a fourth year bachelors degree student, I am doing job hunting in preparation for graduation, which is
+              probably why you are reading this right now, thank you!
+              <br><br>
+              My interests include, but are not limited to: user experience design, product design, and information
+              design.
+              Several of my works related to these interests are displayed in this web portfolio.
+              Please have a look and let me know what you think :)
+            </p>
+          </div>
+          <div class="col-6">
+            <div class="repeat-lines" style="opacity:.3;width:353px;height:309px;">
+              <!--<img src="img/Kevin_headshot_72dpi.png" width=100% height=300px />-->
+            </div>
+          </div>
+        </div>
         <p style="font-size:1.1rem;">
           <a href="kevin_tjia_resume.pdf" style="text-decoration:underline;" target="_blank">
             Click here to view my resume ->
@@ -278,12 +283,15 @@
               </div>
               <div class="row">
                 <div class="col-6">
-                  <p>Members of Toyo University and its partner universities worldwide are invited to participate and share
-                    their voices by submitting their original short films. TIFF receives open submissions on the short film
+                  <p>Members of Toyo University and its partner universities worldwide are invited to participate and
+                    share
+                    their voices by submitting their original short films. TIFF receives open submissions on the short
+                    film
                     competition program.</p>
                 </div>
                 <div class="col-6">
-                  <p>Collaborative Movie is a single compilation of episodic films, each filmed in different countries. A
+                  <p>Collaborative Movie is a single compilation of episodic films, each filmed in different countries.
+                    A
                     selected number of partner institutions will collaborate with students from Toyo University.</p>
                 </div>
               </div>
@@ -301,7 +309,7 @@
           Nominated works of Short Film Competition and completed work of Collaborative Movie were screened at Toyo
           University's Inoue Enryo Hall at the premier on December 11, 2021.
           The premier was live-streamed on the TGS youtube channel, of which the recording is shown below:
-        </p>        
+        </p>
         <h2 class="side-frame">TIFF 2021</h2>
         <div class="iframe-slideshare-16x9">
           <iframe width="100%" src="https://www.youtube.com/embed/_Q71gpR5ESY" title="TIFF 2021" frameborder="0"
@@ -331,7 +339,7 @@
           </button>
           <div class="collapsible-content">
             <div class="row p-0">
-              <div class="col-6">
+              <div class="col-5">
                 <div class="italic">
                   University project
                   <br><br><br>
@@ -341,11 +349,14 @@
                   Duration: 1/2 semester
                 </div>
               </div>
-              <div class="col-6">
+              <div class="col-7">
                 <div>
-                  The OmniTorch was born from a university class project with the instruction of "Design an LED light".<br><br>
-                  Having recently watched the Netflix series Dark at that time, I was inspired to build upon the idea of a futuristic looking flashlight by turning the tv show prop into an (almost) real product.<br><br>
-                  The project scope included designing the aesthetics of the product, its use cases, and the production to a limited degree.
+                  The OmniTorch was born from a university class project with the instruction of "Design an LED
+                  light".<br><br>
+                  Having recently watched the Netflix series Dark at that time, I was inspired to build upon the idea of
+                  a futuristic looking flashlight by turning the tv show prop into an (almost) real product.<br><br>
+                  The project scope included designing the aesthetics of the product, its use cases, and the production
+                  to a limited degree.
                 </div>
               </div>
             </div>
@@ -359,9 +370,7 @@
         </div>
       </div>
 
-      <img src="img/omnitorch/Properties_16x11.png" width="100%"
-          class="mx-auto d-block"
-          alt="Omnitorch Properties">
+      <img src="img/omnitorch/Properties_16x11.png" width="100%" class="mx-auto d-block" alt="Omnitorch Properties">
 
       <div class="padded">
         <div class="container">
@@ -404,7 +413,7 @@
           </button>
           <div class="collapsible-content">
             <div class="row p-0">
-              <div class="col-6">
+              <div class="col-5">
                 <div class="italic">
                   University group project
                   <br><br><br>
@@ -415,10 +424,13 @@
                   Duration: 1 semester
                 </div>
               </div>
-              <div class="col-6">
+              <div class="col-7">
                 <div>
                   <span class="bold">SUMMARY - </span>
-                  Grapevine is an SNS-integration service platform that aims to provide an accessible, all-in-one place for people to satisfy their social media consumption needs. The platform takes the updates, posts and pictures of anyone you wish to follow on any platform, and aggregates them all into a single timeline, in one single app.
+                  Grapevine is an SNS-integration service platform that aims to provide an accessible, all-in-one place
+                  for people to satisfy their social media consumption needs. The platform takes the updates, posts and
+                  pictures of anyone you wish to follow on any platform, and aggregates them all into a single timeline,
+                  in one single app.
                   <br><br>
                   Aggregation is currently in development to support Facebook, Instagram, and Twitter.
                 </div>
@@ -428,7 +440,7 @@
           <div class="line"></div>
         </div>
         <p>
-          
+
         </p>
         <h2 class="side-frame">DEMO</h2>
         <video width="100%" height="100%" controls>
@@ -468,6 +480,31 @@
                 <span>Illustrator</span><span>Autodesk Fusion 360</span><span>PowerPoint</span></div>
             </div>
           </div>
+
+          <div class="line"></div>
+          <button type="button" class="collapsible" id="description5" href="#description5">
+            View project description
+          </button>
+          <div class="collapsible-content">
+            <div class="row p-0">
+              <div class="col-5">
+                <div class="italic">
+                  University project
+                  <br><br><br>
+                  Product planning<br>
+                  Product design
+                  <br><br><br>
+                  Duration: 1/2 semester
+                </div>
+              </div>
+              <div class="col-7">
+                <div>
+                  nothing to see here.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="line"></div>
         </div>
 
         <p>To be added</p>
@@ -486,19 +523,44 @@
                 <span>Autodesk Fusion 360</span><span>Photoshop</span><span>Illustrator</span></div>
             </div>
           </div>
+
+          <div class="line"></div>
+          <button type="button" class="collapsible" id="description6" href="#description6">
+            View project description
+          </button>
+          <div class="collapsible-content">
+            <div class="row p-0">
+              <div class="col-5">
+                <div class="italic">
+                  University project
+                  <br><br><br>
+                  Infographic<br>
+                  Product design
+                  <br><br><br>
+                  Duration: 1/2 semester
+                </div>
+              </div>
+              <div class="col-7">
+                <div>
+                  nothing to see here.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="line"></div>
         </div>
 
         <p>To be added</p>
       </div>
     </div>
 
-    <div id="work7">
+    <!--<div id="work7">
       <h6 class="title">My upcoming plans</h6>
       <div class="line"></div>
       <div class="tools"><span>me</span><span>you?</span></div>
       <p>*plan of my future projects*</p>
       <p style="font-size:.5em">*picture to be changed*</p>
-    </div>
+    </div>-->
   </div>
 
   <div id="back-to-works" href="#categories">
@@ -527,6 +589,13 @@
           </path>
         </svg>
         <p>kevin-a-tjia</p>
+      </a>
+      <a href="https://www.instagram.com/kevin.a.tjia/" target="_blank">
+        <svg width="80px" height="80px" xmlns="http://www.w3.org/2000/svg" class="bi bi-instagram" viewBox="0 0 16 17">
+          <path fill="currentColor"
+            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+        </svg>
+        <p>kevin.a.tjia</p>
       </a>
     </div>
   </div>

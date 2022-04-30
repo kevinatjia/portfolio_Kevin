@@ -1,3 +1,64 @@
+//parallax
+$(document).ready(function () {
+  // init controller
+  var controller = new ScrollMagic.Controller();
+
+  var $window = $(window);
+  var winW = $window.width();
+  var winH = $window.height();
+
+  var $cover = $('#js-cover');
+  var $section01 = $('#js-section01');
+  var scene01 = null;
+
+  var sceneResetFlg = false;
+
+  /** イベント付与 **/
+  $window.on('load', loadEvent);
+  $window.on('resize', resizeEvent);
+
+  /** load時に呼び出す関数 **/
+  function loadEvent() {
+    resizeEvent(); //load時に1度だけresizeEventを呼ぶ
+  }
+
+
+  /** resize時に呼び出す関数 **/
+  function resizeEvent() {
+    winW = $window.width(); //windowの横幅を取得、グローバルに格納
+    winH = $window.height(); //windowの縦幅を取得、グローバルに格納
+
+    $section01.css({
+      'height': winH
+    }); //section01の縦幅をwindowに合わせる
+
+    if (sceneResetFlg) {
+      scene01.destroy(true);
+    }
+
+    /** section01 **/
+    scene01 = new ScrollMagic.Scene({
+        triggerElement: "#js-section01",
+        triggerHook: 'onCenter',
+        duration: (winH / 2)
+      })
+      .offset(winH / 2)
+      .on('progress', function (e) {
+        var prog = e.progress;
+        $cover.css({
+          transform: 'translate(' + -(prog * 100) + 'px,' + prog * (winH / 2) + 'px)',
+          opacity: 1 - prog
+        });
+      })
+      //.setClassToggle($pageList.eq(0), "current") 
+      //.addIndicators({name:'section01'}) // add indicators (requires plugin)
+      .addTo(controller);
+
+    sceneResetFlg = true;
+  }
+});
+
+
 //categories slider
 $(document).ready(function () {
   const slider = document.querySelector('#categories');
@@ -41,7 +102,7 @@ $(document).ready(function () {
     $("#works td").each(function () {
 
       $(this).animate({
-        "opacity": 0.25
+        "opacity": 0.1
       }, 300, function () {
 
         // フィルタリングの条件を満たしているか
@@ -115,7 +176,7 @@ $(function () {
 
     //get clicked id value
     var id = $(this).attr("href"); //get the id of the clicked button
-    var end = id.slice(-1);      //get last character from id
+    var end = id.slice(-1); //get last character from id
     $(`div[id$=${end}]`).show(); //match the div with id ends with the character and show
 
     // 選択されたコンテンツを再表示する
@@ -139,11 +200,11 @@ $(document).ready(function () {
 
     var target = $($(this).attr("href")).offset().top;
 
-    if($(this).is("button")) {
+    if ($(this).is("button")) {
       //scroll offset
       target -= 18;
     }
-    
+
     $("html, body").animate({
       scrollTop: target
     }, 500);
@@ -156,26 +217,28 @@ $(document).ready(function () {
 //header styling on scroll
 $(window).on("scroll", function () {
   //change when scroll is past cover image height - offset
-  var windowHeight = window.innerHeight * 0.88 - 32;
+  var windowHeight = window.innerHeight * 0.88 - 22;
 
   if ($(this).scrollTop() > windowHeight) {
     //change colors
     //$(".header").css("background-color", "var(--main-color)");
     $(".header a").css("color", "var(--tertiary-color)");
+    $(".header a").css("text-shadow", "-1px -1px 0 var(--main-color), 1px -1px 0 var(--main-color), -1px 1px 0 var(--main-color), 1px 1px 0 var(--main-color)")
     //hover color
-    $(".header a").hover(function() {
+    $(".header a").hover(function () {
       $(this).css("color", "var(--accent-color)");
-    }, function() {
+    }, function () {
       $(this).css("color", "var(--tertiary-color)");
     });
-  //change colors back when scroll is <500 again
+    //change colors back when scroll is <500 again
   } else {
-    $(".header").css("background", "transparent");
+    //$(".header").css("background", "transparent");
     $(".header a").css("color", "var(--main-color)");
+    $(".header a").css("text-shadow", "none")
     //hover color
-    $(".header a").hover(function() {
+    $(".header a").hover(function () {
       $(this).css("color", "var(--accent-color)");
-    }, function() {
+    }, function () {
       $(this).css("color", "var(--main-color)");
     });
   }
@@ -185,12 +248,12 @@ $(window).on("scroll", function () {
 $(document).ready(function () {
   var coll = document.getElementsByClassName("collapsible");
   var i;
-  
+
   for (i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function() {
+    coll[i].addEventListener("click", function () {
       this.classList.toggle("active");
       var content = this.nextElementSibling;
-      if (content.style.maxHeight){
+      if (content.style.maxHeight) {
         content.style.maxHeight = null;
       } else {
         content.style.maxHeight = content.scrollHeight + "px";
