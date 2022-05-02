@@ -13,8 +13,9 @@
     rel="stylesheet">
 
   <!--bootstrap-->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
   <!--jquery and scrollmagic-->
   <script src="lib/scrollmagic/uncompressed/ScrollMagic.js"></script>
@@ -34,6 +35,7 @@
 </head>
 
 <body>
+  <div class="repeat-lines"></div>
   <div class="body-container">
 
     <div class="header">
@@ -63,7 +65,8 @@
         <div class="container h-100">
           <div class="row justify-content-center align-items-center h-100" id="js-cover">
             <div class="col-auto">
-              <img src="img/logo3.svg" class="filter-main-color float-right" width="auto" height="300px" />
+              <img src="img/logo3.svg" class="filter-main-color float-end undraggable unselectable" width="auto"
+                height="300px" />
             </div>
             <div class="col-auto">
               <h1 class="cover-name">KEVIN<br>TJIA</h1>
@@ -75,90 +78,89 @@
       </section>
 
     </div>
-  </div>
 
-  <div id="categories" href="#categories">
-    <div class="left">
-      <button value="product" class="product">Product Design</button>
-      <button value="web" class="web">Web Design</button>
-      <svg xmlns="http://www.w3.org/2000/svg" height="100%" width="58px" fill="currentColor">
-        <path d="M10 10 V36" stroke="#847366" stroke-width="1" />
-      </svg>
-      <button value="all" class="all" style="color:var(--tertiary-color);" autofocus>All</button>
+    <div id="categories" href="#categories">
+      <div class="left">
+        <button value="product" class="product">Product Design</button>
+        <button value="web" class="web">Web Design</button>
+        <svg xmlns="http://www.w3.org/2000/svg" height="100%" width="58px" fill="currentColor">
+          <path d="M10 10 V36" stroke="#847366" stroke-width="1" />
+        </svg>
+        <button value="all" class="all" style="color:var(--tertiary-color);" autofocus>All</button>
+      </div>
+      <div class="center">
+        <button value="ux" class="ux">UX Design</button>
+      </div>
+      <div class="right">
+        <button value="info" class="info">Infographic</button>
+        <button value="other" class="other">Other</button>
+      </div>
     </div>
-    <div class="center">
-      <button value="ux" class="ux">UX Design</button>
-    </div>
-    <div class="right">
-      <button value="info" class="info">Infographic</button>
-      <button value="other" class="other">Other</button>
-    </div>
-  </div>
 
-  <table id="works" cellspacing="0" cellpadding="0">
-    <tr>
-      <td class="web info">
-        <a href="#work1" class="current">
-          <img src="img/work_covers/headshot_640x960.png" alt="work1">
-          <div class="overlay">
-            <div class="caption">
-              ABOUT ME
+    <table id="works" cellspacing="0" cellpadding="0">
+      <tr>
+        <td class="web info">
+          <a href="#work1" class="current">
+            <img src="img/work_covers/headshot_640x960.png" alt="work1">
+            <div class="overlay">
+              <div class="caption">
+                ABOUT ME
+              </div>
             </div>
-          </div>
-        </a>
-        <div class="highlight"></div>
-      </td>
-      <td class="web other">
-        <a href="#work2">
-          <img src="img/work_covers/tiff_764x764.png" alt="work2">
-          <div class="overlay">
-            <div class="caption">
-              TIFF
+          </a>
+          <div class="highlight"></div>
+        </td>
+        <td class="web other">
+          <a href="#work2">
+            <img src="img/work_covers/tiff_764x764.png" alt="work2">
+            <div class="overlay">
+              <div class="caption">
+                TIFF
+              </div>
             </div>
-          </div>
-        </a>
-      </td>
-      <td class="product ux">
-        <a href="#work3">
-          <img src="img/work_covers/omnitorch_960x960.png" alt="work3">
-          <div class="overlay">
-            <div class="caption">
-              OMNITORCH
+          </a>
+        </td>
+        <td class="product ux">
+          <a href="#work3">
+            <img src="img/work_covers/omnitorch_960x960.png" alt="work3">
+            <div class="overlay">
+              <div class="caption">
+                OMNITORCH
+              </div>
             </div>
-          </div>
-        </a>
-      </td>
-      <td class="web ux">
-        <a href="#work4">
-          <img src="img/work_covers/grapevine_960x960.png" alt="work4">
-          <div class="overlay">
-            <div class="caption">
-              GRAPEVINE
+          </a>
+        </td>
+        <td class="web ux">
+          <a href="#work4">
+            <img src="img/work_covers/grapevine_960x960.png" alt="work4">
+            <div class="overlay">
+              <div class="caption">
+                GRAPEVINE
+              </div>
             </div>
-          </div>
-        </a>
-      </td>
-      <td class="product">
-        <a href="#work5">
-          <img src="img/work_covers/pref_map_960x960.png" alt="work5">
-          <div class="overlay">
-            <div class="caption">
-              VEXILLOLOGY<br>PROJECT
+          </a>
+        </td>
+        <td class="product">
+          <a href="#work5">
+            <img src="img/work_covers/pref_map_960x960.png" alt="work5">
+            <div class="overlay">
+              <div class="caption">
+                VEXILLOLOGY<br>PROJECT
+              </div>
             </div>
-          </div>
-        </a>
-      </td>
-      <td class="product info">
-        <a href="#work6">
-          <img src="img/work_covers/konomi_kome_960x960.png" alt="work6">
-          <div class="overlay">
-            <div class="caption">
-              KONOMI<br>KOME
+          </a>
+        </td>
+        <td class="product info">
+          <a href="#work6">
+            <img src="img/work_covers/konomi_kome_960x960.png" alt="work6">
+            <div class="overlay">
+              <div class="caption">
+                KONOMI<br>KOME
+              </div>
             </div>
-          </div>
-        </a>
-      </td>
-      <!--<td class="other">
+          </a>
+        </td>
+        <!--<td class="other">
         <a href="#work7">
           <img src="img/work_covers/whats_next.jpg" alt="the future">
           <div class="overlay">
@@ -168,87 +170,99 @@
           </div>
         </a>
       </td>-->
-    </tr>
-  </table>
-
-  <div id="contents">
-
-    <table id="highlight" cellspacing="0" cellpadding="0">
-      <tr>
-        <td>
-          <div id="highlight1"></div>
-        </td>
-        <td>
-          <div id="highlight2"></div>
-        </td>
-        <td>
-          <div id="highlight3"></div>
-        </td>
-        <td>
-          <div id="highlight4"></div>
-        </td>
-        <td>
-          <div id="highlight5"></div>
-        </td>
-        <td>
-          <div id="highlight6"></div>
-        </td>
-        <!--<td>
-          <div id="highlight7"></div>
-        </td>-->
       </tr>
     </table>
 
-    <div id="work1">
-      <div class="padded">
-        <div class="container content-header">
-          <div class="row align-items-center">
-            <div class="col-8">
-              <h6 class="title">ABOUT ME</h6><span class="work-date">1996/09/03</span>
+    <div id="contents">
+
+      <table id="highlight" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <div id="highlight1"></div>
+          </td>
+          <td>
+            <div id="highlight2"></div>
+          </td>
+          <td>
+            <div id="highlight3"></div>
+          </td>
+          <td>
+            <div id="highlight4"></div>
+          </td>
+          <td>
+            <div id="highlight5"></div>
+          </td>
+          <td>
+            <div id="highlight6"></div>
+          </td>
+          <!--<td>
+          <div id="highlight7"></div>
+        </td>-->
+        </tr>
+      </table>
+
+      <div id="work1">
+        <div class="container py-5">
+
+          <div class="row py-4 align-items-center justify-content-center">
+            <div class="col-8 col-md-6 col-lg-5">
+              <h6 class="title">ABOUT ME</h6>
+              <span class="work-date">1996/09/03</span>
             </div>
-            <div class="col-4">
+            <div class="col-4 col-md-4 col-lg-3">
               <div class="tools"><span id="interests">INTERESTS</span><span>Bouldering</span><span>Racket
                   Sports</span><span>Video Games</span><span>Piano</span></div>
             </div>
           </div>
-          <div class="line"></div>
-        </div>
-        <div class="row">
-          <div class="col-6">
-            <p>
-              Hi! My name is Kevin. I come from Epe, a rural town in The Netherlands.
-              Currently, I am studying at Toyo University in Tokyo, Japan, majoring in Information Networking for
-              Innovation
-              and Design (INIAD).
-              As a fourth year bachelors degree student, I am doing job hunting in preparation for graduation, which is
-              probably why you are reading this right now, thank you!
-              <br><br>
-              My interests include, but are not limited to: user experience design, product design, and information
-              design.
-              Several of my works related to these interests are displayed in this web portfolio.
-              Please have a look and let me know what you think :)
-            </p>
-          </div>
-          <div class="col-6">
-            <div class="repeat-lines" style="opacity:.3;width:353px;height:309px;">
-              <!--<img src="img/Kevin_headshot_72dpi.png" width=100% height=300px />-->
+
+          <div class="row py-3 justify-content-center">
+            <div class="col-12 col-md-8">
+              <div class="line"></div>
             </div>
           </div>
-        </div>
-        <p style="font-size:1.1rem;">
-          <a href="kevin_tjia_resume.pdf" style="text-decoration:underline;" target="_blank">
-            Click here to view my resume ->
-          </a>
-        </p>
-        </a>
-      </div>
-    </div>
 
-    <div id="work2">
-      <div class="padded">
-        <div class="container content-header">
-          <div class="row align-items-center">
-            <div class="col-8">
+          <div class="row py-5 justify-content-center">
+            <div class="col-12 col-md-4">
+              <p>
+                Hi! My name is Kevin. I come from Epe, a rural town in The Netherlands.
+                Currently, I am studying at Toyo University in Tokyo, Japan, majoring in Information Networking for
+                Innovation
+                and Design (INIAD).
+                As a fourth year bachelors degree student, I am doing job hunting in preparation for graduation, which
+                is
+                probably why you are reading this right now, thank you!
+                <br><br>
+                My interests include, but are not limited to: user experience design, product design, and information
+                design.
+                Several of my works related to these interests are displayed in this web portfolio.
+                Please have a look and let me know what you think :)
+              </p>
+            </div>
+            <div class="col-12 col-md-4">
+              <div style="width:100%;height:300px;background-color:grey;">
+                <!--<img src="img/Kevin_headshot_72dpi.png" width=100% height=300px />-->
+              </div>
+            </div>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-8">
+              <p class="lead">
+                <a href="kevin_tjia_resume.pdf" style="text-decoration:underline;font-size:18px;" target="_blank">
+                  Click here to view my resume ->
+                </a>
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="work2">
+        <div class="container py-5">
+
+          <div class="row py-4 justify-content-center">
+            <div class="col-8 col-md-6 col-lg-5">
               <h6 class="title">TOYO<br>INTERNATIONAL<br>FILM FESTIVAL</h6>
               <br>
               <a href="https://www.tiff-toyo.com/" target="_blank">
@@ -256,128 +270,184 @@
               </a>
               <span class="work-date">Team Project</span>
             </div>
-            <div class="col-4">
+            <div class="col-4 col-md-4 col-lg-3">
               <div class="tools"><span>OBS</span><span>Adobe Premiere
                   Pro</span><span>Wix</span><span>JavaScript</span><span>Powerpoint</span></div>
             </div>
           </div>
-          <div class="line"></div>
-          <button type="button" class="collapsible" id="description2" href="#description2">
-            View project description
-          </button>
-          <div class="collapsible-content">
-            <p>
-              The Toyo International Film Festival, TIFF for short, is the initiative of TGS, a group of Toyo University
-              students supervised by university staff <a href="https://www.youtube.com/c/ToyoGemstone/about"
-                target="_blank">(more info on TGS here)</a>.
-              The festival consists of two parts, the Short Film Competition and the Collaborative Movie Project:
-            </p>
-            <div class="container text-center">
-              <div class="row">
-                <div class="col-6">
-                  <h2>Short Film<br>Competition</h2>
+
+          <div class="row py-3 justify-content-center">
+            <div class="col-12 col-md-8">
+              <div class="line"></div>
+            </div>
+
+            <div class="col-12 col-md-8">
+              <button type="button" class="collapsible" id="description2" href="#description2">
+                View project description
+              </button>
+
+              <div class="collapsible-content">
+                <p>
+                  The Toyo International Film Festival, TIFF for short, is the initiative of TGS, a group of Toyo
+                  University
+                  students supervised by university staff <a href="https://www.youtube.com/c/ToyoGemstone/about"
+                    target="_blank">(more info on TGS here)</a>.
+                  The festival consists of two parts, the Short Film Competition and the Collaborative Movie Project:
+                </p>
+                <div class="container text-center">
+
+                  <div class="row">
+                    <div class="col-6">
+                      <h2>Short Film<br>Competition</h2>
+                    </div>
+                    <div class="col-6">
+                      <h2>Colaborative<br>Movie Project</h2>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-6">
+                      <p>Members of Toyo University and its partner universities worldwide are invited to participate
+                        and
+                        share
+                        their voices by submitting their original short films. TIFF receives open submissions on the
+                        short
+                        film
+                        competition program.</p>
+                    </div>
+                    <div class="col-6">
+                      <p>Collaborative Movie is a single compilation of episodic films, each filmed in different
+                        countries.
+                        A
+                        selected number of partner institutions will collaborate with students from Toyo University.</p>
+                    </div>
+                  </div>
                 </div>
-                <div class="col-6">
-                  <h2>Colaborative<br>Movie Project</h2>
+
+                <div class="row">
+                  <div class="col-12">
+                    <p>
+                      TIFF aims to create a brand-new cross-cultural platform,
+                      where everyone's unique voices are heard loud and clear without any limits or restrictions.
+                      The founding year, 2021, its title was 'Your Voice'.
+                    </p>
+                  </div>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-6">
-                  <p>Members of Toyo University and its partner universities worldwide are invited to participate and
-                    share
-                    their voices by submitting their original short films. TIFF receives open submissions on the short
-                    film
-                    competition program.</p>
-                </div>
-                <div class="col-6">
-                  <p>Collaborative Movie is a single compilation of episodic films, each filmed in different countries.
-                    A
-                    selected number of partner institutions will collaborate with students from Toyo University.</p>
-                </div>
-              </div>
             </div>
-            <p>
-              TIFF aims to create a brand-new cross-cultural platform,
-              where everyone's unique voices are heard loud and clear without any limits or restrictions.
-              The founding year, 2021, its title was 'Your Voice'.
-            </p>
-          </div>
-          <div class="line"></div>
-        </div>
 
-        <p>
-          Nominated works of Short Film Competition and completed work of Collaborative Movie were screened at Toyo
-          University's Inoue Enryo Hall at the premier on December 11, 2021.
-          The premier was live-streamed on the TGS youtube channel, of which the recording is shown below:
-        </p>
-        <h2 class="side-frame">TIFF 2021</h2>
-        <div class="iframe-slideshare-16x9">
-          <iframe width="100%" src="https://www.youtube.com/embed/_Q71gpR5ESY" title="TIFF 2021" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-            Your browser does not support this video.
-          </iframe>
-        </div>
-      </div>
-    </div>
+            <div class="col-12 col-md-8">
+              <div class="line"></div>
+            </div>
 
-    <div id="work3">
-      <div class="padded">
-        <div class="container content-header">
-          <div class="row align-items-center">
-            <div class="col-8">
-              <h6 class="title">OMNITORCH</h6><span class="work-date">2020/Fall</span>
-            </div>
-            <div class="col-4">
-              <div class="tools"><span>Autodesk Fusion 360</span><span>Illustrator</span><span>Photoshop</span></div>
-            </div>
           </div>
 
-          <div class="line"></div>
-          <button type="button" class="collapsible" id="description3" href="#description3">
-            View project description
-          </button>
-          <div class="collapsible-content">
-            <div class="row p-0">
-              <div class="col-5">
-                <div class="italic">
-                  University project
-                  <br><br><br>
-                  Product design<br>
-                  User Experience design
-                  <br><br><br>
-                  Duration: 1/2 semester
-                </div>
-              </div>
-              <div class="col-7">
-                <div>
-                  The OmniTorch was born from a university class project with the instruction of "Design an LED
-                  light".<br><br>
-                  Having recently watched the Netflix series Dark at that time, I was inspired to build upon the idea of
-                  a futuristic looking flashlight by turning the tv show prop into an (almost) real product.<br><br>
-                  The project scope included designing the aesthetics of the product, its use cases, and the production
-                  to a limited degree.
-                </div>
+          <div class="row py-5 justify-content-center">
+            <div class="col-12 col-md-8">
+              <p>
+                Nominated works of Short Film Competition and completed work of Collaborative Movie were screened at
+                Toyo
+                University's Inoue Enryo Hall at the premier on December 11, 2021.
+                The premier was live-streamed on the TGS youtube channel, of which the recording is shown below:
+              </p>
+            </div>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-8">
+              <h3 class="side-frame">TIFF 2021</h3>
+              <div class="iframe-slideshare-16x9">
+                <iframe width="100%" src="https://www.youtube.com/embed/_Q71gpR5ESY" title="TIFF 2021" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                  Your browser does not support this video.
+                </iframe>
               </div>
             </div>
           </div>
-          <div class="line"></div>
-        </div>
 
-        <div class="switch-image">
-          <img class="image-main" src="img/omnitorch/Render1_shadow_OFF.png" width="100%" alt="Omnitorch Multiview">
-          <img class="image-hover" src="img/omnitorch/Render1_shadow_ON.png" width="100%" alt="Omnitorch Multiview">
         </div>
       </div>
 
-      <img src="img/omnitorch/Properties_16x11.png" width="100%" class="mx-auto d-block" alt="Omnitorch Properties">
+      <div id="work3">
+        <div class="container py-5">
 
-      <div class="padded">
-        <div class="container">
-          <div class="row">
+          <div class="row py-4 justify-content-center">
+            <div class="col-8 col-md-6 col-lg-5">
+              <h6 class="title">OMNITORCH</h6>
+              <span class="work-date">2020/Fall</span>
+            </div>
+            <div class="col-4 col-md-4 col-lg-3">
+              <div class="tools"><span>Autodesk Fusion 360</span><span>Illustrator</span><span>Photoshop</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row py-3 justify-content-center">
+            <div class="col-12 col-md-8">
+              <div class="line"></div>
+            </div>
+
+            <div class="col-12 col-md-8">
+              <button type="button" class="collapsible" id="description3" href="#description3">
+                View project description
+              </button>
+
+              <div class="collapsible-content">
+                <div class="row p-0">
+                  <div class="col-5">
+                    <div class="italic">
+                      University project
+                      <br><br><br>
+                      Product design<br>
+                      User Experience design
+                      <br><br><br>
+                      Duration: 1/2 semester
+                    </div>
+                  </div>
+                  <div class="col-7">
+                    <div>
+                      The OmniTorch was born from a university class project with the instruction of "Design an LED
+                      light".<br><br>
+                      Having recently watched the Netflix series Dark at that time, I was inspired to build upon the
+                      idea
+                      of
+                      a futuristic looking flashlight by turning the tv show prop into an (almost) real
+                      product.<br><br>
+                      The project scope included designing the aesthetics of the product, its use cases, and the
+                      production
+                      to a limited degree.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-8">
+              <div class="line"></div>
+            </div>
+
+          </div>
+
+          <div class="row py-5 justify-content-center">
             <div class="col-12">
-              <div class="text-over-img">
-                <img src="img/omnitorch/dark1.png" width="100%" alt="Netflix Dark's flashlight">
+              <div class="switch-image">
+                <img class="image-main" src="img/omnitorch/Render1_shadow_OFF.png" width="100%"
+                  alt="Omnitorch Multiview">
+                <img class="image-hover" src="img/omnitorch/Render1_shadow_ON.png" width="100%"
+                  alt="Omnitorch Multiview">
+              </div>
+            </div>
+
+            <div class="col-12">
+              <img src="img/omnitorch/Properties_16x11.png" width="100%" class="mx-auto d-block py-5"
+                alt="Omnitorch Properties" />
+            </div>
+
+            <div class="col-12">
+              <div class="text-over-img mx-auto" width="100%">
+                <img src="img/omnitorch/dark1_1280x720.png" width="100%" class="position-relative"
+                  alt="Netflix Dark's flashlight">
                 <p class="overlay-text-topleft">
                   <span style="color:#E50914;">NETFLIX</span> | Dark
                 </p>
@@ -390,215 +460,303 @@
               </div>
             </div>
           </div>
+
         </div>
       </div>
-    </div>
 
-    <div id="work4">
-      <div class="padded">
-        <div class="container content-header">
-          <div class="row align-items-center">
-            <div class="col-8">
-              <h6 class="title">GRAPEVINE</h6><span class="work-date">Team Project | 2020-2021</span>
+      <div id="work4">
+        <div class="container py-5">
+
+          <div class="row py-4 justify-content-center">
+            <div class="col-8 col-md-6 col-lg-5">
+              <h6 class="title">GRAPEVINE</h6>
+              <span class="work-date">Team Project | 2020-2021</span>
             </div>
-            <div class="col-4">
+            <div class="col-4 col-md-4 col-lg-3">
               <div class="tools">
-                <span>Django</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Figma</span></div>
-            </div>
-          </div>
-
-          <div class="line"></div>
-          <button type="button" class="collapsible" id="description4" href="#description4">
-            View project description
-          </button>
-          <div class="collapsible-content">
-            <div class="row p-0">
-              <div class="col-5">
-                <div class="italic">
-                  University group project
-                  <br><br><br>
-                  Web design<br>
-                  User Experience design<br>
-                  User Interface design
-                  <br><br><br>
-                  Duration: 1 semester
-                </div>
-              </div>
-              <div class="col-7">
-                <div>
-                  <span class="bold">SUMMARY - </span>
-                  Grapevine is an SNS-integration service platform that aims to provide an accessible, all-in-one place
-                  for people to satisfy their social media consumption needs. The platform takes the updates, posts and
-                  pictures of anyone you wish to follow on any platform, and aggregates them all into a single timeline,
-                  in one single app.
-                  <br><br>
-                  Aggregation is currently in development to support Facebook, Instagram, and Twitter.
-                </div>
+                <span>Django</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Figma</span>
               </div>
             </div>
           </div>
-          <div class="line"></div>
-        </div>
-        <p>
 
-        </p>
-        <h2 class="side-frame">DEMO</h2>
-        <video width="100%" height="100%" controls>
-          <source src="img/grapevine/demo.mp4" type="video/mp4">
-          Your browser does not support this video.
-        </video>
-        <p>
-          <span class="bold">TARGET USER - </span>
-          Grapevine is designed specifically for those that struggle to keep up with the abundance of social media
-          platforms - and those who wish to follow updates of their friends and family, but from the ease of just one
-          place.
-          <br><br>
-          We believe a large portion of these target users are seniors, which is why our UI is made especially
-          accessible for those with visual impairments or who are easily overwhelmed by clutter.
-        </p>
-        <h2 class="side-frame">SURVEY</h2>
-        <div class="iframe-slideshare-16x9">
-          <iframe
-            src="https://docs.google.com/presentation/d/e/2PACX-1vTEO-obeDpDr9Ai6uaPr9RdpWapgwxv78jc09qLnwL8c50VuC3dRzhGSll3HqefJw/embed?start=false&loop=false&delayms=3000"
-            frameborder="0" scrolling="no" marginwidth="0" marginheight="0" allowfullscreen="true"
-            mozallowfullscreen="true" webkitallowfullscreen="true">
-            Your browser does not support this slideshow.
-          </iframe>
+          <div class="row py-3 justify-content-center">
+            <div class="col-12 col-md-8">
+              <div class="line"></div>
+            </div>
+
+            <div class="col-12 col-md-8">
+              <button type="button" class="collapsible" id="description4" href="#description4">
+                View project description
+              </button>
+
+              <div class="collapsible-content">
+                <div class="row p-0">
+                  <div class="col-5">
+                    <div class="italic">
+                      University group project
+                      <br><br><br>
+                      Web design<br>
+                      User Experience design<br>
+                      User Interface design
+                      <br><br><br>
+                      Duration: 1 semester
+                    </div>
+                  </div>
+                  <div class="col-7">
+                    <div>
+                      Grapevine is an SNS-integration service platform that aims to provide an accessible, all-in-one
+                      place
+                      for people to satisfy their social media consumption needs. The platform takes the updates, posts
+                      and
+                      pictures of anyone you wish to follow on any platform, and aggregates them all into a single
+                      timeline,
+                      in one single app.
+                      <br><br>
+                      Aggregation is currently in development to support Facebook, Instagram, and Twitter.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-8">
+              <div class="line"></div>
+            </div>
+
+          </div>
+
+          <div class="row py-5 justify-content-center">
+            <div class="col-12 col-md-8">
+              <h3 class="side-frame">DEMO</h3>
+              <video width="100%" controls>
+              <source src="img/grapevine/demo.mp4" type="video/mp4">
+              Your browser does not support this video.
+            </video>
+            </div>
+          </div>
+
+          <div class="row pb-5 justify-content-center">
+            <div class="col-12 col-md-8">
+              <p>
+                <span class="bold">TARGET USER - </span>
+                Grapevine is designed specifically for those that struggle to keep up with the abundance of social media
+                platforms - and those who wish to follow updates of their friends and family, but from the ease of just
+                one
+                place.
+                <br><br>
+                We believe a large portion of these target users are seniors, which is why our UI is made especially
+                accessible for those with visual impairments or who are easily overwhelmed by clutter.
+              </p>
+            </div>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-8">
+              <h2 class="side-frame">SURVEY</h2>
+              <div class="iframe-slideshare-16x9">
+                <iframe
+                  src="https://docs.google.com/presentation/d/e/2PACX-1vTEO-obeDpDr9Ai6uaPr9RdpWapgwxv78jc09qLnwL8c50VuC3dRzhGSll3HqefJw/embed?start=false&loop=false&delayms=3000"
+                  frameborder="0" scrolling="no" marginwidth="0" marginheight="0" allowfullscreen="true"
+                  mozallowfullscreen="true" webkitallowfullscreen="true">
+                  Your browser does not support this slideshow.
+                </iframe>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
-    </div>
 
-    <div id="work5">
-      <div class="padded">
-        <div class="container content-header">
-          <div class="row align-items-center">
-            <div class="col-8">
-              <h6 class="title">VEXILLOLOGY<br>PROJECT</h6><span class="work-date">2021/Fall</span>
+      <div id="work5">
+        <div class="container py-5">
+
+          <div class="row py-4 justify-content-center">
+            <div class="col-8 col-md-6 col-lg-5">
+              <h6 class="title">VEXILLOLOGY<br>PROJECT</h6>
+              <span class="work-date">2021/Fall</span>
             </div>
-            <div class="col-4">
+            <div class="col-4 col-md-4 col-lg-3">
               <div class="tools">
                 <span>Illustrator</span><span>Autodesk Fusion 360</span><span>PowerPoint</span></div>
+              </div>
+            </div>
+
+          <div class="row py-3 justify-content-center">
+            <div class="col-12 col-md-8">
+              <div class="line"></div>
+            </div>
+
+            <div class="col-12 col-md-8">
+              <button type="button" class="collapsible" id="description5" href="#description5">
+                View project description
+              </button>
+
+              <div class="collapsible-content">
+                <div class="row p-0">
+                  <div class="col-5">
+                    <div class="italic">
+                      University project
+                      <br><br><br>
+                      Product planning<br>
+                      Product design
+                      <br><br><br>
+                      Duration: 1/2 semester
+                    </div>
+                  </div>
+                  <div class="col-7">
+                    <div>
+                      Nothing to see here.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-8">
+              <div class="line"></div>
+            </div>
+
+          </div>
+
+          <div class="row py-5 justify-content-center">
+            <div class="col-12 col-md-8">
+              <p>To be added</p>
             </div>
           </div>
 
-          <div class="line"></div>
-          <button type="button" class="collapsible" id="description5" href="#description5">
-            View project description
-          </button>
-          <div class="collapsible-content">
-            <div class="row p-0">
-              <div class="col-5">
-                <div class="italic">
-                  University project
-                  <br><br><br>
-                  Product planning<br>
-                  Product design
-                  <br><br><br>
-                  Duration: 1/2 semester
-                </div>
-              </div>
-              <div class="col-7">
-                <div>
-                  nothing to see here.
-                </div>
-              </div>
+          <div class="row pb-5 justify-content-center">
+            <div class="col-12 col-md-8">
+
             </div>
           </div>
-          <div class="line"></div>
+
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-8">
+
+            </div>
+          </div>
+
         </div>
-
-        <p>To be added</p>
       </div>
-    </div>
 
-    <div id="work6">
-      <div class="padded">
-        <div class="container content-header">
-          <div class="row align-items-center">
-            <div class="col-8">
-              <h6 class="title">KONOMI KOME</h6><span class="work-date">2021/Spring</span>
+      <div id="work6">
+        <div class="container py-5">
+
+          <div class="row py-4 justify-content-center">
+            <div class="col-8 col-md-6 col-lg-5">
+              <h6 class="title">KONOMI KOME</h6>
+              <span class="work-date">2021/Spring</span>
             </div>
-            <div class="col-4">
+            <div class="col-4 col-md-4 col-lg-3">
               <div class="tools">
                 <span>Autodesk Fusion 360</span><span>Photoshop</span><span>Illustrator</span></div>
+              </div>
+            </div>
+
+          <div class="row py-3 justify-content-center">
+            <div class="col-12 col-md-8">
+              <div class="line"></div>
+            </div>
+
+            <div class="col-12 col-md-8">
+              <button type="button" class="collapsible" id="description6" href="#description6">
+                View project description
+              </button>
+
+              <div class="collapsible-content">
+                <div class="row p-0">
+                  <div class="col-5">
+                    <div class="italic">
+                      University project
+                      <br><br><br>
+                      Infographic<br>
+                      Product design
+                      <br><br><br>
+                      Duration: 1/2 semester
+                    </div>
+                  </div>
+                  <div class="col-7">
+                    <div>
+                      Nothing to see here.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-8">
+              <div class="line"></div>
+            </div>
+
+          </div>
+
+          <div class="row py-5 justify-content-center">
+            <div class="col-12 col-md-8">
+              <p>To be added</p>
             </div>
           </div>
 
-          <div class="line"></div>
-          <button type="button" class="collapsible" id="description6" href="#description6">
-            View project description
-          </button>
-          <div class="collapsible-content">
-            <div class="row p-0">
-              <div class="col-5">
-                <div class="italic">
-                  University project
-                  <br><br><br>
-                  Infographic<br>
-                  Product design
-                  <br><br><br>
-                  Duration: 1/2 semester
-                </div>
-              </div>
-              <div class="col-7">
-                <div>
-                  nothing to see here.
-                </div>
-              </div>
+          <div class="row pb-5 justify-content-center">
+            <div class="col-12 col-md-8">
+              
             </div>
           </div>
-          <div class="line"></div>
+
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-8">
+
+            </div>
+          </div>
+
         </div>
-
-        <p>To be added</p>
       </div>
-    </div>
 
-    <!--<div id="work7">
+      <!--<div id="work7">
       <h6 class="title">My upcoming plans</h6>
       <div class="line"></div>
       <div class="tools"><span>me</span><span>you?</span></div>
       <p>*plan of my future projects*</p>
       <p style="font-size:.5em">*picture to be changed*</p>
     </div>-->
-  </div>
-
-  <div id="back-to-works" href="#categories">
-    <div class="text left">BACK TO </div>
-    <div class="center">
-      <svg xmlns="http://www.w3.org/2000/svg" width="120" height="80" viewBox="0 0 120 80">
-        <path fill-rule="evenodd" d="M10 65 L60 25 L110 65" stroke="#847366" stroke-width=".6" fill="none" />
-      </svg>
     </div>
-    <div class="text right">&nbsp;WORKS</div>
-  </div>
 
-  <div id="contact" class="repeat-lines">
-    <h2 class="vertical">Contact</h2>
-    <h5>Say hi to me here</h5>
-    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kevin.a.tjia@gmail.com&su=Hi!" target="_blank">
-      <h3><span style="opacity:.5;">//</span>kevin.a.tjia@gmail.com</h3>
-    </a>
-    <h5>Or find me here</h5>
-    <div class="socials">
-      <a href="https://www.linkedin.com/in/kevin-a-tjia/" target="_blank">
-        <svg width="80px" height="80px" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin-in"
-          class="svg-inline--fa fa-linkedin-in" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-          <path fill="currentColor"
-            d="M100.3 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.6 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.3 61.9 111.3 142.3V448z">
-          </path>
+    <div id="back-to-works" href="#categories">
+      <div class="text left">BACK TO </div>
+      <div class="center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="120" height="80" viewBox="0 0 120 80">
+          <path fill-rule="evenodd" d="M10 65 L60 25 L110 65" stroke="#847366" stroke-width=".6" fill="none" />
         </svg>
-        <p>kevin-a-tjia</p>
-      </a>
-      <a href="https://www.instagram.com/kevin.a.tjia/" target="_blank">
-        <svg width="80px" height="80px" xmlns="http://www.w3.org/2000/svg" class="bi bi-instagram" viewBox="0 0 16 17">
-          <path fill="currentColor"
-            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
-        </svg>
-        <p>kevin.a.tjia</p>
-      </a>
+      </div>
+      <div class="text right">&nbsp;WORKS</div>
     </div>
-  </div>
+
+    <div id="contact">
+      <h2 class="vertical">CONTACT</h2>
+      <h5>Say hi to me here</h5>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kevin.a.tjia@gmail.com&su=Hi!" target="_blank">
+        <h3><span style="opacity:.5;">//</span>kevin.a.tjia@gmail.com</h3>
+      </a>
+      <h5>Or find me here</h5>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/kevin-a-tjia/" target="_blank">
+          <svg width="80px" height="80px" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin-in"
+            class="svg-inline--fa fa-linkedin-in" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path fill="currentColor"
+              d="M100.3 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.6 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.3 61.9 111.3 142.3V448z">
+            </path>
+          </svg>
+          <p>kevin-a-tjia</p>
+        </a>
+        <a href="https://www.instagram.com/kevin.a.tjia/" target="_blank">
+          <svg width="80px" height="80px" xmlns="http://www.w3.org/2000/svg" class="bi bi-instagram"
+            viewBox="0 0 16 17">
+            <path fill="currentColor"
+              d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+          </svg>
+          <p>kevin.a.tjia</p>
+        </a>
+      </div>
+    </div>
   </div>
 </body>
 

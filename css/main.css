@@ -2,15 +2,17 @@
     --main-color: #473c31;          /* rgba(71,60,49) */
     --main-color-lshade: #4f4337;
     --secondary-color: #847366;     /* rgba() */
-    --tertiary-color: #ddd0c8;      /* rgba() */
+    --tertiary-color: #dcd4cf;      /* rgba() */
     --accent-color: #ee8c4a;
 
-    --test1-color: #ffffff;
+    font-size: 24px;    /* for adjusting rem in padding & margins */
+
+    scroll-behavior: auto !important;
 }
 
 /* ========== FONTS ========== */
 
-a { font-family: 'Work Sans', sans-serif; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; color: inherit;}
+a { font-family: 'Work Sans', sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; color: inherit;}
 h1 { font-family: 'Work Sans', sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 600; }
 h2 { font-family: 'Work Sans', sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 600; line-height: 1em; }
 h3 { font-family: 'Work Sans', sans-serif; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 600; line-height: 15.4px; }
@@ -49,16 +51,18 @@ body {
 
 .body-container {
     color: var(--main-color);
-    background-color: #D8E1E3;
+    background-color: transparent;
     width: 100%;
 }
 
 .repeat-lines {
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     line-height: 2;
-
-    background-image: linear-gradient(to right, #ccc 1px, transparent 1px), linear-gradient(#ccc 1px, transparent 1px);
-    background-size: 22px 22px;
+    position: fixed;
+    background-image: linear-gradient(to right, #cfc1b9 1px, transparent 1px), linear-gradient(#cfc1b9 1px, transparent 1px);
+    background-size: 32px 32px;
+    background-color: var(--tertiary-color);
 }
 
 .anchor {
@@ -71,6 +75,19 @@ body {
 .nopadding {
     padding: 0 !important;
     margin: 0 !important;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.undraggable {
+    pointer-events: none;
 }
 
 /* ========== HEADER ========== */
@@ -128,7 +145,7 @@ body {
     left: 0;
     right: 0;
     height: calc(100vh - 62px);
-    background-color: var(--tertiary-color);
+    background-color: transparent;
 }
 
 .stripe-h {
@@ -270,7 +287,7 @@ body {
     overflow: hidden;
 }
 
-#works table, tr, td, a {
+#works table, #works tr, #works td, #works a {
     border: none;
     border-collapse: collapse;
     margin: 0;
@@ -353,6 +370,7 @@ body {
 
 #contents {
     height: auto;
+    color: var(--tertiary-color);
     background-color: var(--main-color);
     position: relative;
     padding: 0;
@@ -388,12 +406,6 @@ body {
     background-color: var(--accent-color);
 }
 
-#contents .padded {
-    color: var(--tertiary-color);
-    position: relative;
-    padding: 0 20%;
-}
-
 /* ========== SECTION 2 - CONTENT HEADER ========== */
 
 #contents .content-header {
@@ -405,7 +417,7 @@ body {
 }
 
 #contents .title {
-    font-size: clamp(2em, 5vw, 3rem);
+    font-size: clamp(2em, 5vw, 3em);
     line-height: 1em;
     display: inline-block;
 }
@@ -506,14 +518,8 @@ body {
     margin-bottom: 30px;
 }
 
-#contents p {
-    padding-bottom: 100px;
-    margin: 0;
-}
-
 #contents a {
     color: var(--accent-color);
-    font-size: inherit;
     font-weight: inherit;
 }
 
@@ -524,16 +530,8 @@ body {
 
 /* ========== SECTION 2 - CONTENTS IMAGE ETC ========== */
 
-#contents img {
-    margin-bottom: 100px;
-}
-
 #contents .switch-image {
     position: relative;
-}
-
-#contents .switch-image > img {
-    margin: 0;
 }
 
 #contents .switch-image img.image-hover {
@@ -553,20 +551,20 @@ body {
 
 #contents .text-over-img {
     position: relative;
+    color: var(--tertiary-color);
 }
 
-#contents .text-over-img > .overlay-text-topleft {
+#contents .text-over-img .overlay-text-topleft {
     position: absolute;
     top: 0;
     left: 0;
     padding: 24px;
 }
 
-#contents .text-over-img > .overlay-text-main {
+#contents .text-over-img .overlay-text-main {
     position: absolute;
     bottom: 0;
     left: 0;
-    transform: translateY(-100%);
     padding: 24px 10%;
 }
 
@@ -576,17 +574,11 @@ body {
     background-color: var(--secondary-color);
 }
 
-#contents video {
-    padding: 0;
-    margin-bottom: 100px;
-}
-
 #contents .iframe-slideshare-16x9 {
     padding-bottom: calc(56.25% + 38px);
     position: relative;
     width: 100%;
     height: 0;
-    margin-bottom: 100px;
 }
 
 #contents .iframe-slideshare-16x9 iframe {
@@ -595,27 +587,25 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    border:1px solid #CCC; 
+    border:1px solid var(--secondary-color); 
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 768px) {
     .side-frame {
         position: relative;
         color: var(--secondary-color);
-        padding-bottom: 4px;
-        margin-bottom: 0;
-        font-size: 1.2em;
+        margin-bottom: 0 !important;
+        font-size: 2.2em;
+        line-height: .7em;
     }
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 768px) {
     .side-frame {
-        left: calc(20% - 1.2em);
-
+        margin: 0 0 0 -1.1em;
+        position: absolute;
         writing-mode: vertical-rl;
         text-orientation: mixed;
-        position: absolute;
-        margin: 0;
         font-size: 4.2em;
         line-height: 1.5em;
         color: var(--secondary-color);
@@ -674,33 +664,19 @@ body {
     height: calc(100vh - 62px);     /* minus header height */
     margin: 0;
     position: relative;
-    background-color: #D8E1E3;
+    background-color: transparent;
 }
 
-@media screen and (max-width: 400px) {
-    #contact h2 {
-        left: 10px;
-        top: 20px;
-        line-height: 1em;
-    }
-
-    #contact h5 {
-        padding: 80px 20px 0 40%;
-        color: var(--secondary-color);
-        font-size: 1.5em;
-        margin: 0;
-    }
-}
-
-@media screen and (min-width: 400px) {
-    #contact h2 {
-        left: 15%;
-        top: 40px;
-    }
+#contact h2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    line-height: .7em;
+    font-size: 100px;
 }
 
 #contact h5 {
-    padding: 80px 20px 20px 40%;
+    padding: 120px 20px 20px 40%;
     color: var(--secondary-color);
     opacity: .7;
     font-size: 1.5em;
