@@ -17,7 +17,7 @@ h1 { font-family: 'Work Sans', sans-serif; font-size: 24px; font-style: normal; 
 h2 { font-family: 'Work Sans', sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 600; line-height: 1em; }
 h3 { font-family: 'Work Sans', sans-serif; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 600; line-height: 15.4px; }
 h4 { font-family: 'Work Sans', sans-serif; font-size: 17px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 15.4px; }
-h5 { font-family: 'Work Sans', sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 15.4px; }
+h5 { font-family: 'Work Sans', sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 15.4px; }
 h6 { font-family: 'Work Sans', sans-serif; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 200; }
 p { font-family: 'Work Sans', sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 300; line-height: 20px; }
 div { font-family: 'Work Sans', sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 300; line-height: 20px; }
@@ -28,18 +28,6 @@ button { font-family: 'Work Sans', sans-serif; font-size: 16px; font-style: norm
 .filter-main-color { filter: invert(20%) sepia(30%) saturate(374%) hue-rotate(349deg) brightness(96%) contrast(89%); }
 .filter-secondary-color { filter: invert(50%) sepia(9%) saturate(690%) hue-rotate(344deg) brightness(90%) contrast(93%); }
 .filter-tertiary-color { filter: invert(93%) sepia(10%) saturate(273%) hue-rotate(337deg) brightness(91%) contrast(89%); }
-
-.vertical {
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    position: absolute;
-    margin: 0;
-    font-size: 4.2em;
-    line-height: 1.5em;
-    color: var(--secondary-color);
-    opacity: 0.35;
-}
-
 
 
 /* ========== GENERAL ========== */
@@ -88,6 +76,16 @@ body {
 
 .undraggable {
     pointer-events: none;
+}
+
+.vertical {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    position: absolute;
+    margin: 0;
+    font-size: 4.2em;
+    color: var(--secondary-color);
+    opacity: 0.35;
 }
 
 /* ========== HEADER ========== */
@@ -660,47 +658,46 @@ body {
 /* ========== CONTACT ========== */
 
 #contact {
-    width: 100%;
     height: calc(100vh - 62px);     /* minus header height */
     margin: 0;
     position: relative;
     background-color: transparent;
 }
 
-#contact h2 {
+#contact h1 {
     position: absolute;
     left: 0;
     top: 0;
-    line-height: .7em;
+    line-height: .6em;
     font-size: 100px;
 }
 
-#contact h5 {
-    padding: 120px 20px 20px 40%;
-    color: var(--secondary-color);
-    opacity: .7;
+#contact a {
     font-size: 1.5em;
-    margin: 0;
+    font-weight: 300;
 }
 
-#contact h3 {
-    padding: 20px 20px 0 30%;
-    margin: 0;
-    font-size: clamp(1em, 4vw, 2em);
-    overflow: hidden;
-    line-height: 1.1em;
-    font-family: Lucida Sans Typewriter,Lucida Console,monaco,Bitstream Vera Sans Mono,monospace;
+#contact a:hover {
+    color: var(--accent-color);
 }
 
-#contact .socials {
-    padding: 20px 20px 0 30%;
+#contact a svg {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
-#contact .socials a {
-    display: inline-block;
-    text-decoration: none;
-    text-align: center;
-    color: var(--main-color);
-    height: 100px;
-    width: 100px;
+#contact a svg:hover {
+    transform: scale(1.2);
+}
+
+#contact a svg:hover path {
+    fill: var(--accent-color);
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
