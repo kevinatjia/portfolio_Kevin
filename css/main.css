@@ -540,7 +540,7 @@ body {
     bottom: 0;
     object-fit: contain;
     opacity: 0;
-    transition: opacity .2s;
+    transition: opacity .8s;
 }
 
 #contents .switch-image:hover img.image-hover {
@@ -662,6 +662,13 @@ body {
     margin: 0;
     position: relative;
     background-color: transparent;
+    overflow: hidden;
+}
+
+#contact #logo {
+    left: 0;
+    top: 0;
+    transform: translate(-100px,200px);
 }
 
 #contact h1 {
