@@ -97,8 +97,7 @@ $(document).ready(function () {
   $("#categories button").click(function () {
     // retrieve the button value
     var target = $(this).attr("value");
-    web = product = planning = info = other = false;
-    // examine all li elements
+    // iterate all li elements
     $("#works td").each(function () {
 
       $(this).animate({
@@ -108,19 +107,25 @@ $(document).ready(function () {
         // フィルタリングの条件を満たしているか
         if ($(this).hasClass(target) || target == "all") {
           // 条件を満たしている場合は再表示
-          // $(this).show();
           $(this).animate({
             "opacity": 1
           }, 300);
         }
       });
     });
-
-    $("#categories button").each(function () {
-      $(this).css("color", "var(--secondary-color)");
-
+    //iterate all buttons
+    $("categories button").each(function () {
+      //reset colors
+      $(this).removeClass("tertiary");
+      //if this is the clicked button, make active - otherwise hover function
       if ($(this).hasClass(target)) {
-        $(this).css("color", "var(--tertiary-color)");
+        $(this).addClass("tertiary");
+      } else {
+        $(this).hover(function () {
+          $(this).addClass("tertiary");
+        }, function () {
+          $(this).removeClass("tertiary");
+        });
       }
     });
   });

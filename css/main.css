@@ -88,6 +88,10 @@ body {
     opacity: 0.35;
 }
 
+.tertiary {
+    color: var(--tertiary-color);
+}
+
 /* ========== HEADER ========== */
 
 .header {
@@ -173,7 +177,7 @@ body {
 .categories-pointer {
     margin: inherit;
     padding: 40px;
-    z-index: 3;
+    z-index: 1;
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -207,8 +211,6 @@ body {
     text-align: center;
     background-color: var(--main-color);
     position: relative;
-    z-index: 1;
-
     overflow-x: hidden;
     white-space: nowrap;
 
@@ -274,7 +276,6 @@ body {
     background-color: var(--main-color);
     white-space: nowrap;
     position: relative;
-    z-index: 1;
 }
 
 #works table {
